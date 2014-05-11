@@ -12,6 +12,10 @@ trait PaginatorTrait {
      */
     public function newEloquentBuilder($query)
     {
+        if (isset($this->pageVariable))
+            return new EloquentBuilder($query, $this->pageVariable);
+
         return new EloquentBuilder($query);
     }
+
 }
