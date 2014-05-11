@@ -10,7 +10,8 @@
     "require": {
         "illuminate/database": "*",
         "illuminate/support": "4.1.*",
-        "illuminate/events": "4.1.*"
+        "illuminate/events": "4.1.*",
+        "illuminate/pagination": "4.1.*"
     },
     "require-dev": {
         "loic-sharma/profiler": "1.1.*"

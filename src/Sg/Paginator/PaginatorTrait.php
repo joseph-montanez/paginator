@@ -1,3 +1,17 @@
 <?php namespace Sg\Paginator;
 
-trait PaginatorTrait {}
+use Sg\Paginator\EloquentBuilder;
+
+trait PaginatorTrait {
+
+    /**
+     * Create a new Eloquent query builder for the model.
+     *
+     * @param  \Illuminate\Database\Query\Builder $query
+     * @return \Sg\Paginator\EloquentBuilder|static
+     */
+    public function newEloquentBuilder($query)
+    {
+        return new EloquentBuilder($query);
+    }
+}
