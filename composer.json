@@ -1,0 +1,23 @@
+{
+    "name": "sloveniangooner/paginator",
+    "authors": [
+        {
+            "name": "Lovro Papež",
+            "email": "lovro.papez@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/database": "*",
+        "illuminate/support": "4.1.*",
+        "illuminate/events": "4.1.*"
+    },
+    "require-dev": {
+        "loic-sharma/profiler": "1.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Sg": "src/"
+        }
+    }
+}
