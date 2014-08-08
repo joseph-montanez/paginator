@@ -35,7 +35,9 @@ class EloquentBuilder extends Builder
         // array of items we can create the paginator instances for the items.
         $page = isset($_GET[$this->pageVariable]) ? $_GET[$this->pageVariable] : 1;
 
-        $items = $this->query->forPage($page, $perPage)->get($columns);
+        $this->query->forPage($page, $perPage);
+        
+        $items = $this->get($columns)->all();
 
         $paginator = new Paginator($items, $total, $perPage, $page, $this->pageVariable);
         $paginator->setupPaginationContext();
